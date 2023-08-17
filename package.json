@@ -6,13 +6,14 @@
 		"dev": "vite dev",
 		"build": "vite build",
 		"preview": "vite preview",
+		"buildview": "vite build && vite preview",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
 		"lint": "prettier --plugin-search-dir . --check .",
 		"format": "prettier --plugin-search-dir . --write ."
 	},
 	"devDependencies": {
-		"@sveltejs/adapter-auto": "^2.1.0",
+		"@sveltejs/adapter-static": "^2.0.3",
 		"@sveltejs/kit": "^1.22.6",
 		"prettier": "^3.0.2",
 		"prettier-plugin-svelte": "^3.0.3",
@@ -20,7 +21,8 @@
 		"svelte-check": "^3.5.0",
 		"tslib": "^2.6.1",
 		"typescript": "^5.1.6",
-		"vite": "^4.4.9"
+		"vite": "^4.4.9",
+		"vite-plugin-mkcert": "^1.16.0"
 	},
 	"type": "module"
 }
