@@ -24,5 +24,8 @@
 		"vite": "^4.4.9",
 		"vite-plugin-mkcert": "^1.16.0"
 	},
-	"type": "module"
+	"type": "module",
+	"dependencies": {
+		"@elysiajs/eden": "^0.6.1"
+	}
 }
