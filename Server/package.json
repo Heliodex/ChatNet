@@ -13,9 +13,14 @@
     "typescript": "^5.0.0"
   },
   "dependencies": {
+    "@elysiajs/cors": "^0.6.0",
     "@trpc/server": "^10.37.1",
     "@urql/core": "^4.1.1",
     "cors": "^2.8.5",
+    "elysia": "^0.6.11",
+    "nanoid": "^4.0.2",
+    "neo4j-driver": "^5.11.0",
+    "ws": "^8.13.0",
     "zod": "^3.22.2"
   }
 }
