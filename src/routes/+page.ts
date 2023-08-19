@@ -1,12 +1,7 @@
-import client from "$lib/eden"
+import client from "$lib/trpc"
 
 export async function load() {
-	const { data: id, error } = await client.id["test"].get()
-
-	console.log(id)
-	console.log(error)
-
 	return {
-		id: ""
+		id: client.hello.query("omg"),
 	}
 }

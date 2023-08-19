@@ -26,6 +26,6 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"@elysiajs/eden": "^0.6.1"
+		"@trpc/client": "^10.37.1"
 	}
 }

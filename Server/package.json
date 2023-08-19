@@ -6,14 +6,16 @@
     "dev": "bun run --watch index.ts"
   },
   "devDependencies": {
+    "@types/cors": "^2.8.13",
     "bun-types": "latest"
   },
   "peerDependencies": {
     "typescript": "^5.0.0"
   },
   "dependencies": {
-    "@elysiajs/cors": "^0.6.0",
+    "@trpc/server": "^10.37.1",
     "@urql/core": "^4.1.1",
-    "elysia": "^0.6.11"
+    "cors": "^2.8.5",
+    "zod": "^3.22.2"
   }
 }

@@ -1,20 +1,17 @@
-import { Elysia, t } from "elysia"
-import { cors } from "@elysiajs/cors"
+import { publicProcedure, router } from "./trpc"
+import { createHTTPServer } from "@trpc/server/adapters/standalone"
+import { z } from "zod"
+import cors from "cors"
 
-const app = new Elysia()
-	.use(cors())
-	.get("/", () => "Hi Elysia")
-	.get("/id/:id", data => data.params.id)
-	.post("/mirror", data => data.body, {
-		body: t.Object({
-			id: t.Number(),
-			name: t.String(),
-		}),
-	})
-	.listen(8080)
+const appRouter = router({
+	hello: publicProcedure
+		.input(z.string())
+		.query(({ input }) => `hello ${input}`),
+})
 
-export type App = typeof app
+createHTTPServer({
+	middleware: cors(),
+	router: appRouter,
+}).listen(3000)
 
-console.log(
-	`🦊 Elysia is running at ${app.server?.hostname}:${app.server?.port}`,
-)
+export type AppRouter = typeof appRouter
